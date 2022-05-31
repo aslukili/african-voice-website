@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/25/2020
  * Time: 11:33 AM
  */
@@ -14,7 +14,7 @@ use app\core\exception\ForbiddenException;
 /**
  * Class AuthMiddleware
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app\core
  */
 class AuthMiddleware extends BaseMiddleware

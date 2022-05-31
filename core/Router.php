@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/7/2020
  * Time: 10:01 AM
  */
@@ -12,8 +12,8 @@ use app\core\exception\NotFoundException;
 /**
  * Class Router
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
- * @package thecodeholic\mvc
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
+ * @package aslukili\mvc
  */
 class Router
 {

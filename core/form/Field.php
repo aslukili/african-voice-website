@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/9/2020
  * Time: 7:05 AM
  */
@@ -13,13 +13,14 @@ use app\core\Model;
 /**
  * Class Field
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package core\form
  */
 class Field extends BaseField
 {
     const TYPE_TEXT = 'text';
     const TYPE_PASSWORD = 'password';
+    const TYPE_NUMBER = 'number';
     const TYPE_FILE = 'file';
 
     /**

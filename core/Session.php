@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/24/2020
  * Time: 11:18 PM
  */
@@ -11,7 +11,7 @@ namespace app\core;
 /**
  * Class Session
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app\core
  */
 class Session

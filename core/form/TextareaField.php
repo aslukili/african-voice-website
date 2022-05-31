@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/26/2020
  * Time: 3:49 PM
  */
@@ -11,7 +11,7 @@ namespace app\core\form;
 /**
  * Class TextareaField
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app\core\form
  */
 class TextareaField extends BaseField

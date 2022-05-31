@@ -1,9 +1,9 @@
 {
-    "name": "thecodeholic/phpmvc-framework",
+    "name": "aslukili/phpmvc-framework",
     "authors": [
         {
-            "name": "Zura Sekhniashvili",
-            "email": "zurasekhniashvili@gmail.com"
+            "name": "Abdeslam Loukili",
+            "email": "abdeslam.edu@gmail.com"
         }
     ],
     "autoload": {
@@ -12,6 +12,7 @@
         }
     },
     "require": {
-        "vlucas/phpdotenv": "^5.0"
+        "vlucas/phpdotenv": "^5.0",
+      "ext-pdo": "*"
     }
 }

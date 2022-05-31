@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/7/2020
  * Time: 10:23 AM
  */
@@ -11,8 +11,8 @@ namespace app\core;
 /**
  * Class Request
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
- * @package thecodeholic\mvc
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
+ * @package aslukili\mvc
  */
 class Request
 {

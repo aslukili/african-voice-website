@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/8/2020
  * Time: 8:56 AM
  */
@@ -13,7 +13,7 @@ use app\core\Controller;
 /**
  * Class AboutController
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app\controllers
  */
 class AboutController extends Controller

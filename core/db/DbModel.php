@@ -1,7 +1,7 @@
 <?php
 
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/10/2020
  * Time: 9:19 AM
  */
@@ -14,7 +14,7 @@ use app\core\Model;
 /**
  * Class DbModel
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app\core
  */
 abstract class DbModel extends Model

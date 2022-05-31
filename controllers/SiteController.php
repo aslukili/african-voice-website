@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/8/2020
  * Time: 8:43 AM
  */
@@ -19,7 +19,7 @@ use app\models\User;
 /**
  * Class SiteController
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app\controllers
  */
 class SiteController extends Controller
@@ -32,7 +32,7 @@ class SiteController extends Controller
     public function home()
     {
         return $this->render('home', [
-            'name' => 'TheCodeholic'
+            'name' => 'aslukili'
         ]);
     }
 

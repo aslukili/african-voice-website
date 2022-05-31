@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/25/2020
  * Time: 11:35 AM
  */
@@ -13,7 +13,7 @@ use app\core\Application;
 /**
  * Class ForbiddenException
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app\core\exception
  */
 class ForbiddenException extends \Exception

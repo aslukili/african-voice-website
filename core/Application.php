@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/7/2020
  * Time: 9:57 AM
  */
@@ -12,7 +12,7 @@ use app\core\db\Database;
 /**
  * Class Application
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app
  */
 class Application

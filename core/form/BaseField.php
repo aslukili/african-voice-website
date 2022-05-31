@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/26/2020
  * Time: 3:49 PM
  */
@@ -13,7 +13,7 @@ use app\core\Model;
 /**
  * Class BaseField
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app\core\form
  */
 abstract class BaseField

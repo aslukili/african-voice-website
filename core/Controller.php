@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/8/2020
  * Time: 8:43 AM
  */
@@ -11,7 +11,7 @@ use app\core\middlewares\BaseMiddleware;
 /**
  * Class Controller
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app\core
  */
 class Controller

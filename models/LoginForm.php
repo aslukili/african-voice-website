@@ -1,6 +1,6 @@
 <?php
 /**
- * User: TheCodeholic
+ * User: aslukili
  * Date: 7/25/2020
  * Time: 9:36 AM
  */
@@ -14,7 +14,7 @@ use app\core\Model;
 /**
  * Class LoginForm
  *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
+ * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app\models
  */
 class LoginForm extends Model
