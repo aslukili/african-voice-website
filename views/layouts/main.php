@@ -1,83 +1,76 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/output.css">
+    <script src="js/index.js" defer></script>
     <title><?php echo $this->title ?></title>
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<body class="font-primary">
+    <header
+            class="lg:container lg:mx-auto sticky top-0 z-30 w-full md:py-2 bg-white shadow-lg shadow-red-300/10 font-hacking font-medium">
+        <nav class="flex flex-wrap items-center justify-between w-full px-4 text-lg">
+            <div>
+                <a href="#">
+                    <img class="h-12" src="asset/african-voice-logo.png" alt="" />
+                </a>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-6 w-6 cursor-pointer md:hidden block"
+                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+                <ul class="pt-4 font-bold text-base text-gray-900 md:flex md:justify-between md:items-center md:pt-0">
+                    <li>
+                        <a class="md:p-4 py-2 block hover:text-primary" href="">Home</a>
+                    </li>
+                    <li>
+                        <a class="md:p-4 py-2 block hover:text-primary" href="/Events">Events</a>
+                    </li>
+                    <li>
+                        <a class="md:p-4 py-2 block hover:text-primary" href="/Blog">Blog</a>
+                    </li>
+                    <li>
+                        <a class="md:p-4 py-2 block hover:text-primary" href="/Community">Community</a>
+                    </li>
+                    <li>
+                        <a class="md:p-4 py-2 block hover:text-primary" href="/Contact">Contact</a>
+                    </li>
+                </ul>
+                <?php use app\core\Application;
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-            </li>
-        </ul>
-        <?php use app\core\Application;
-
-        if (Application::isGuest()): ?>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/login">Login</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/register">Register</a>
-                </li>
-            </ul>
-        <?php else: ?>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/profile">
-                        Profile
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/logout">
-                        Welcome <?php echo Application::$app->user->getDisplayName() ?> (Logout)
-                    </a>
-                </li>
-            </ul>
-        <?php endif; ?>
-    </div>
-</nav>
-
-<div class="container">
+                if (Application::isGuest()): ?>
+                        <a class="md:px-4 md:py-1 md:border md:rounded-md md:border-primary md:hover:bg-white  md:bg-primary md:block hover:text-primary md:text-white transition ease-in delay-75"
+                           href="/register">Join us</a>
+                <?php else: ?>
+                    <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><?php echo Application::$app->user->getDisplayName() ?><svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
+                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                            <li>
+                                <a href="/member-dashboard" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="/logout" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </nav>
+    </header>
+<main class="container mx-auto">
     <?php if (Application::$app->session->getFlash('success')): ?>
         <div class="alert alert-success">
             <p><?php echo Application::$app->session->getFlash('success') ?></p>
         </div>
     <?php endif; ?>
     {{content}}
-</div>
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+</main>
+<footer class="container mx-auto">
+    foo
+</footer>
+<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
 </body>
 </html>
