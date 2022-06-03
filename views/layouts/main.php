@@ -60,7 +60,7 @@
             </div>
         </nav>
     </header>
-<main class="container mx-auto">
+<main class="">
     <?php if (Application::$app->session->getFlash('success')): ?>
         <div class="alert alert-success">
             <p><?php echo Application::$app->session->getFlash('success') ?></p>
