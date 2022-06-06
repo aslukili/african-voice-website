@@ -12,25 +12,25 @@
     <hr class="mt-7 border-primary"/>
 </div>
 
-<div class="py-3">
+<div class="py-8 px-3">
     <div class="container mx-auto">
         <h2 class="text-4xl font-bold">Join The Community</h2>
         <!--    cards-->
-        <div class="mt-9 grid md:grid-cols-3 gap-1">
+        <div class="mt-9 grid md:grid-cols-3 gap-3">
             <div class="flex justify-center">
                 <div class="max-w-sm bg-white rounded-lg  shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <img class="rounded-t-lg h-56 w-full" src="asset/activate.png" alt="" />
+                    <img class="rounded-t-lg w-full" src="asset/activate.png" alt="" />
                     <div class="p-5">
                         <a href="#">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-primary">Activate</h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Let others hear your voice, Join our events to improve your communication skills and be a great public speaker</p>
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center">
+            <div class="flex justify-center mt-7 md:mt-0">
                 <div class="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <img class="rounded-t-lg h-56 w-full" src="asset/communicate.png" alt="" />
+                    <img class="rounded-t-lg w-full" src="asset/communicate.png" alt="" />
                     <div class="p-5">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-primary">Communicate</h5>
                         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Share your opinions, Explore the possibilities within respectful connection through and across our differences.</p>
@@ -38,9 +38,9 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center">
+            <div class="flex justify-center mt-7 md:mt-0">
                 <div class="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <img class="rounded-t-lg h-56 w-full" src="asset/train.png" alt="" />
+                    <img class="rounded-t-lg  w-full" src="asset/train.png" alt="" />
                     <div class="p-5">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-primary">Train</h5>
                         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Our trainers empowers you with the skills to build self awareness and promote constructive communication</p>
@@ -53,11 +53,11 @@
         </div>
     </div>
 </div>
-<div class="bg-emerald-100">
-    <div class="py-3 mt-7 md:mt-36 container mx-auto">
+<div class="bg-emerald-100 md:py-8">
+    <div class="py-3 my-7 md:mt-16  container mx-auto">
     <h2 class="text-4xl font-bold">Mission, Vision, Value</h2>
     <!--    mission, vission, value-->
-    <div class="mt-24 grid md:grid-cols-3 gap-1">
+    <div class="mt-24 grid md:grid-cols-3 gap-3">
         <div class="flex justify-center">
             <div class="max-w-sm">
                 <div class="bg-amber-600 w-10 h-10 mb-7"></div>
@@ -82,10 +82,10 @@
     </div>
 </div>
 </div>
-<div class="py-3 mt-7 md:mt-36 container mx-auto">
+<div class="py-8 md:mt-7 container mx-auto">
     <h2 class="text-4xl font-bold">Upcoming Events</h2>
     <!-- events -->
-    <div class="px-5 mt-9 grid md:grid-cols-4 gap-3 justify-between">
+    <div class="px-5 mt-9 grid sm:grid-cols-2 xl:grid-cols-4 gap-3  justify-center">
         <div class="flex justify-center">
             <div class="max-w-sm bg-white rounded-sm  shadow-md dark:bg-gray-800 dark:border-gray-700">
                 <img class="rounded-t-sm h-40 w-full" src="asset/first.png" alt="event" />
@@ -141,10 +141,39 @@
     </div>
 </div>
 
-<div>
-    <h2 class="text-4xl font-bold">Impact</h2>
-    <!-- numbers -->
-    <div class="px-5 mt-9 grid md:grid-cols-3 gap-3 justify-between">
-    </div>
+<div class="bg-gray-300 py-9">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold">Impact</h2>
+        <!-- numbers -->
+        <div class="flex flex-col px-5 mt-9 md:grid md:grid-cols-3 gap-3 justify-between">
+            <div class="text-center">
+                <p class="font-bold text-primary text-3xl">+460</p>
+                <p class="font-semibold text-2xl">Derectly engaged</p>
+            </div>
+            <div class="text-center mt-9 md:mt-0">
+                <p class="font-bold text-primary text-3xl">+6500</p>
+                <p class="font-semibold text-2xl"> Reached</p>
+            </div>
+            <div class="text-center mt-9 md:mt-0">
+                <p class="font-bold text-primary text-3xl">+30</p>
+                <p class="font-semibold text-2xl">Nationalities</p>
+            </div>
+        </div>
 <!--    quetes-->
+        <div class="mt-10 flex items-center justify-center px-5 py-5">
+            <div class="w-full mx-auto rounded-lg bg-white shadow-lg px-5 pt-5 pb-10 text-gray-800" style="max-width: 700px">
+                <div class="w-full mb-10">
+                    <div class="text-3xl text-indigo-500 text-left leading-tight h-3">“</div>
+                    <p class="text-xl text-gray-600 text-center px-5">Work for a cause, not for applause. Live life to express, not to impress. Don’t strive to make your presence noticed, just make your absence felt.</p>
+                    <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">”</div>
+                </div>
+                <div class="w-full">
+                    <p class="text-md text-indigo-500 font-bold text-center">Hassan Loukili</p>
+                    <p class="text-xs text-gray-500 text-center">Founder of African voice</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+

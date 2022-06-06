@@ -32,7 +32,7 @@ class SiteController extends Controller
     public function home()
     {
         return $this->render('home', [
-            'name' => 'aslukili'
+            'name' => 'Name'
         ]);
     }
 
@@ -62,7 +62,6 @@ class SiteController extends Controller
                 Application::$app->response->redirect('/');
                 return 'Show success page';
             }
-
         }
         $this->setLayout('auth');
         return $this->render('register', [
@@ -84,5 +83,11 @@ class SiteController extends Controller
     public function profile()
     {
         return $this->render('profile');
+    }
+
+    public function dashboard()
+    {
+        $this->setLayout('dashboard');
+        return $this->render('dashboard', []);
     }
 }
