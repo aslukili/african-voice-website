@@ -52,7 +52,6 @@
     <div class="flex flex-col md:flex-row">
         <nav aria-label="alternative nav">
             <div class="bg-gray-800 shadow-xl h-20 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48 content-center">
-
                 <div class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
                     <ul class="list-reset flex flex-row md:flex-col pt-3 md:py-3 px-1 md:px-2 text-center md:text-left">
                         <li class="mr-3 flex-1">
@@ -77,15 +76,13 @@
                         </li>
                     </ul>
                 </div>
-
-
             </div>
         </nav>
         <section>
             <div id="main" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
 
                 <div class="bg-gray-800 pt-3">
-                    <div class="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
+                    <div class=" bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
                         <h1 class="font-bold pl-2">Analytics</h1>
                     </div>
                 </div>
