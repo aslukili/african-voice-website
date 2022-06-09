@@ -16,6 +16,7 @@ namespace app\core;
  */
 class Response
 {
+    //statusCode not used since we start using Exceptions
     public function statusCode(int $code)
     {
         http_response_code($code);

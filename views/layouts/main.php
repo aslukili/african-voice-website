@@ -24,7 +24,7 @@
             <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
                 <ul class="pt-4 font-bold text-base text-gray-900 md:flex md:justify-between md:items-center md:pt-0">
                     <li>
-                        <a class="md:p-4 py-2 block hover:text-primary" href="">Home</a>
+                        <a class="md:p-4 py-2 block hover:text-primary" href="/">Home</a>
                     </li>
                     <li>
                         <a class="md:p-4 py-2 block hover:text-primary" href="/events">Events</a>
