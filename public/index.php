@@ -34,5 +34,10 @@ $app->router->get('/contact', [SiteController::class, 'contact']);
 $app->router->get('/about', [AboutController::class, 'index']);
 $app->router->get('/profile', [SiteController::class, 'profile']);
 $app->router->get('/dashboard', [SiteController::class, 'dashboard']);
+$app->router->get('/members', [SiteController::class, 'members']);
+$app->router->get('/events', [SiteController::class, 'events']);
+ $app->router->get('/national-rep', [SiteController::class, 'nationalRep']);
+
+
 
 $app->run();

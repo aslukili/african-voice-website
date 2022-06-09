@@ -90,4 +90,22 @@ class SiteController extends Controller
         $this->setLayout('dashboard');
         return $this->render('dashboard', []);
     }
+
+    public function members()
+    {
+        $this->setLayout('dashboard');
+        return $this->render('members', []);
+    }
+
+    public function events()
+    {
+        $this->setLayout('dashboard');
+        return $this->render('events', []);
+    }
+
+    public function nationalRep()
+    {
+        $this->setLayout('dashboard');
+        return $this->render('national-rep', []);
+    }
 }
