@@ -45,6 +45,15 @@ abstract class DbModel extends Model
         return Application::$app->db->prepare($sql);
     }
 
+    public function getAll()
+    {
+        $tableName = static::tableName();
+        $statement = self::prepare("SELECT * FROM $tableName");
+        $statement->execute();
+        $this->dataList =  $statement->fetchAll();
+        return true;
+    }
+
     public static function findOne($where)
     {
         $tableName = static::tableName();

@@ -12,10 +12,10 @@ class m0003_make_events_table {
         $SQL = "CREATE TABLE events (
                 id INT AUTO_INCREMENT PRIMARY KEY,
 	            title varchar(100) NOT NULL,
+	            sub_title varchar(100) NULL,
                 description TEXT NOT NULL,
-                sub_title varchar(100) NULL,
-                available_seats INT NULL,
-                responsable VARCHAR(100) NOT NULL,
+                responsible VARCHAR(100) NOT NULL,
+                seats INT NULL,
                 starting_date DATE NOT NULL
             )  ENGINE=INNODB;";
         $db->pdo->exec($SQL);
