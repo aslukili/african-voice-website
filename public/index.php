@@ -35,8 +35,16 @@ $app->router->get('/about', [AboutController::class, 'index']);
 $app->router->get('/profile', [SiteController::class, 'profile']);
 $app->router->get('/dashboard', [SiteController::class, 'dashboard']);
 $app->router->get('/members', [SiteController::class, 'members']);
-$app->router->get('/events', [\app\controllers\DashboardController::class, 'events']);
-$app->router->post('/events', [\app\controllers\DashboardController::class, 'events']);
+
+
+//events resources
+$app->router->get('/events', [\app\controllers\EventController::class, 'eventList']);
+$app->router->post('/events', [\app\controllers\EventController::class, 'add']);
+$app->router->post('/delete-event', [\app\controllers\EventController::class, 'delete']);
+$app->router->get('/update-event', [\app\controllers\EventController::class, 'update']);
+$app->router->post('/update-event', [\app\controllers\EventController::class, 'update']);
+
+
 $app->router->get('/national-rep', [SiteController::class, 'nationalRep']);
 
 

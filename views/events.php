@@ -1,4 +1,5 @@
- <section class="flex-grow">
+
+<section class="flex-grow">
     <div id="main" class="flex flex-col main-content bg-gray-100 pb-24 md:pb-5">
         <div class="flex bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
             <h1 class="font-bold pl-2">Analytics</h1>
@@ -45,7 +46,7 @@
                                 Country
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Responsable
+                                Responsible
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Starting date
@@ -59,116 +60,32 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                Apple MacBook Pro 17"
-                            </th>
-                            <td class="px-6 py-4">
-                                Morocco
-                            </td>
-                            <td class="px-6 py-4">
-                                Mehdi ajana
-                            </td>
-                            <td class="px-6 py-4">
-                                Aug 12, 2022
-                            </td>
-                            <td class="px-6 py-4">
-                                upcoming
-                            </td>
-                            <td class="px-6 py-4">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
-                            </td>
-                        </tr>
-                        <tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                Apple MacBook Pro 17"
-                            </th>
-                            <td class="px-6 py-4">
-                                Morocco
-                            </td>
-                            <td class="px-6 py-4">
-                                Mehdi ajana
-                            </td>
-                            <td class="px-6 py-4">
-                                Aug 12, 2022
-                            </td>
-                            <td class="px-6 py-4">
-                                upcoming
-                            </td>
-                            <td class="px-6 py-4 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
-                            </td>
-                        </tr>
-                        <tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                Apple MacBook Pro 17"
-                            </th>
-                            <td class="px-6 py-4">
-                                Morocco
-                            </td>
-                            <td class="px-6 py-4">
-                                Mehdi ajana
-                            </td>
-                            <td class="px-6 py-4">
-                                Aug 12, 2022
-                            </td>
-                            <td class="px-6 py-4">
-                                upcoming
-                            </td>
-                            <td class="px-6 py-4 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
-                            </td>
-                        </tr>
-                        <tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                Apple MacBook Pro 17"
-                            </th>
-                            <td class="px-6 py-4">
-                                Morocco
-                            </td>
-                            <td class="px-6 py-4">
-                                Mehdi ajana
-                            </td>
-                            <td class="px-6 py-4">
-                                Aug 12, 2022
-                            </td>
-                            <td class="px-6 py-4">
-                                upcoming
-                            </td>
-                            <td class="px-6 py-4 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
-                            </td>
-                        </tr>
-                        <tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                Apple MacBook Pro 17"
-                            </th>
-                            <td class="px-6 py-4">
-                                Morocco
-                            </td>
-                            <td class="px-6 py-4">
-                                Mehdi ajana
-                            </td>
-                            <td class="px-6 py-4">
-                                Aug 12, 2022
-                            </td>
-                            <td class="px-6 py-4">
-                                upcoming
-                            </td>
-                            <td class="px-6 py-4 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
-                            </td>
-                        </tr>
+                        <?php foreach ($events as $event):?>
+                            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                    <?php echo $event['title']?>
+                                </th>
+                                <td class="px-6 py-4">
+                                    <?php echo $event['country']?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?php echo $event['responsible']?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?php echo $event['starting_date']?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    upcoming
+                                </td>
+                                <td class="px-6 py-4 flex">
+                                    <a href="update-event?id=<?=$event['id']?>" class="bg-red-500"><i class="fa fa-edit"></a>
+                                    <form method="post" action="delete-event" class="mr-1">
+                                        <input type="hidden" name="id" value="<?= $event['id']?>">
+                                        <button class="bg-yellow-500"><i class="fa fa-trash"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -207,7 +124,7 @@
                      </div>
                      <div class="relative z-0 w-full mb-6 group">
                          <input type="text" name="responsible" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                         <label for="responsible" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Starting date</label>
+                         <label for="responsible" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Responsible</label>
                      </div>
                      <div class="grid xl:grid-cols-2 xl:gap-6">
                          <div class="relative z-0 w-full mb-6 group">
@@ -215,14 +132,23 @@
                              <label for="seats" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Seats</label>
                          </div>
                          <div class="relative z-0 w-full mb-6 group">
+                             <input type="text" name="country" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                             <label for="starting date" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Country</label>
+                         </div>
+                     </div>
+                     <div class="grid xl:grid-cols-2 xl:gap-6">
+                         <div class="relative z-0 w-full mb-6 group">
                              <input type="date" name="starting_date" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                             <label for="starting date" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Starting date</label>
+                             <label for="starting_date" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">starting date</label>
+                         </div>
+                         <div class="relative z-0 w-full mb-6 group">
+                             <input type="date" name="ending_date" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                             <label for="ending_date" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">ending date</label>
                          </div>
                      </div>
                      <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
                  </form>
              </div>
-             <!-- Modal footer -->
          </div>
      </div>
  </div>

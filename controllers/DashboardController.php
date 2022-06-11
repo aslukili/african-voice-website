@@ -17,27 +17,14 @@ use app\models\User;
 use app\models\Event;
 
 /**
- * Class SiteController
+ * Class DashboardController
  *
  * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app\controllers
  */
 class DashboardController extends Controller
 {
-    public function events(Request $request)
-    {
-        $addModel = new Event();
-        if ($request->getMethod() === 'post') {
-            $addModel->loadData($request->getBody());
-            if ($addModel->validate() && $addModel->save()) {
-                Application::$app->session->setFlash('success', 'event added!');
-                Application::$app->response->redirect('/events');
-                return 'Show success page';
-            }
-        }
-        $this->setLayout('dashboard');
-        return $this->render('events', []);
-    }
+
 
 
     public function dashboard()

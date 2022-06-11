@@ -24,7 +24,9 @@ class Event extends DbModel
     public string $description = '';
     public string $responsible = '';
     public string $seats = '';
+    public string $country = '';
     public string $starting_date = '';
+    public string $ending_date = '';
 
     public static function tableName(): string
     {
@@ -33,7 +35,7 @@ class Event extends DbModel
 
     public function attributes(): array
     {
-        return ['title', 'sub_title', 'description', 'responsible', 'seats', 'starting_date'];
+        return ['title', 'sub_title', 'description', 'responsible', 'seats', 'country', 'starting_date', 'ending_date'];
     }
 
 //    public function labels(): array
@@ -54,6 +56,7 @@ class Event extends DbModel
             'sub_title' => [self::RULE_REQUIRED],
             'description' => [self::RULE_REQUIRED],
             'starting_date' => [self::RULE_REQUIRED],
+            'ending_date' => [self::RULE_REQUIRED],
         ];
     }
 
@@ -62,11 +65,25 @@ class Event extends DbModel
         return parent::save();
     }
 
+    public function findOne(int $id)
+    {
+        return parent::findOne($id);
+    }
+
     public function getAll()
     {
         return parent::getAll();
     }
 
+    public function delete(int $id)
+    {
+        return parent::delete($id);
+    }
+
+    public function update(int $id)
+    {
+        return parent::update($id);
+    }
 //    public function getDisplayName(): string
 //    {
 //        return $this->firstname . ' ' . $this->lastname;

@@ -19,6 +19,7 @@ use app\core\Model;
  */
 abstract class DbModel extends Model
 {
+    public $dataList = [];
     abstract public static function tableName(): string;
 
     static public function primaryKey(): string
@@ -47,23 +48,42 @@ abstract class DbModel extends Model
 
     public function getAll()
     {
-        $tableName = static::tableName();
+        $tableName = $this->tableName();
         $statement = self::prepare("SELECT * FROM $tableName");
         $statement->execute();
         $this->dataList =  $statement->fetchAll();
         return true;
     }
 
-    public static function findOne($where)
+    public function findOne(int $where)
     {
-        $tableName = static::tableName();
-        $attributes = array_keys($where);
-        $sql = implode("AND", array_map(fn ($attr) => "$attr = :$attr", $attributes));
-        $statement = self::prepare("SELECT * FROM $tableName WHERE $sql");
-        foreach ($where as $key => $item) {
-            $statement->bindValue(":$key", $item);
-        }
+        $tableName = $this->tableName();
+        $statement = self::prepare("SELECT * FROM $tableName where id = $where");
         $statement->execute();
-        return $statement->fetchObject(static::class);
+        $this->dataList = $statement->fetchALL();
+        return true;
+    }
+
+    public function delete(int $id)
+    {
+        $tableName = $this->tableName();
+        $statement = self::prepare("DELETE FROM $tableName WHERE id = $id");
+        $statement->execute();
+        return true;
+    }
+
+    public function update(int $id)
+    {
+        $tableName = $this->tableName();
+        $attributes = $this->attributes();
+        $params = array_map(fn($attr) => "$attr=:$attr", $attributes );
+        $statement = self::prepare("UPDATE $tableName SET  
+                   ".implode(',', $params)." WHERE id = $id");
+        foreach($attributes as $attribute){
+            $statement->bindValue(":$attribute", $this->{$attribute});
+        }
+
+        $statement->execute();
+        return true;
     }
 }
