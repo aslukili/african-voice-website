@@ -27,6 +27,7 @@ class Event extends DbModel
     public string $country = '';
     public string $starting_date = '';
     public string $ending_date = '';
+    public string $image = '';
 
     public static function tableName(): string
     {
@@ -35,7 +36,7 @@ class Event extends DbModel
 
     public function attributes(): array
     {
-        return ['title', 'sub_title', 'description', 'responsible', 'seats', 'country', 'starting_date', 'ending_date'];
+        return ['title', 'sub_title', 'description', 'responsible', 'seats', 'country', 'starting_date', 'ending_date', 'image'];
     }
 
 //    public function labels(): array
@@ -84,8 +85,5 @@ class Event extends DbModel
     {
         return parent::update($id);
     }
-//    public function getDisplayName(): string
-//    {
-//        return $this->firstname . ' ' . $this->lastname;
-//    }
+
 }

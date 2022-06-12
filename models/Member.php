@@ -9,6 +9,7 @@ namespace app\models;
 
 
 use app\core\db\DbModel;
+use app\core\UserModel;
 
 /**
  * Class Member
@@ -16,7 +17,7 @@ use app\core\db\DbModel;
  * @author  Abdeslam Loukili <abdeslam.edu@gmail.com>
  * @package app\models
  */
-class Member extends DbModel
+class Member extends UserModel
 {
     public int $id = 0;
     public string $full_name = '';
@@ -66,6 +67,11 @@ class Member extends DbModel
         return parent::findOne($id);
     }
 
+    public static function getOne($where)
+    {
+        return parent::getOne($where);
+    }
+
     public function getAll()
     {
         return parent::getAll();
@@ -79,5 +85,10 @@ class Member extends DbModel
     public function update(int $id)
     {
         return parent::update($id);
+    }
+
+    public function getDisplayName(): string
+    {
+        return $this->full_name . ' ' . $this->full_name;
     }
 }

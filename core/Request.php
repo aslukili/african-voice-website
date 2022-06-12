@@ -50,10 +50,20 @@ class Request
             }
         }
         if ($this->isPost()) {
+            if (isset($_FILES['image'])){
+                $target = "images/".basename($_FILES['image']['name']);
+                $img_name = $_FILES['image']['name'];
+                $img_size = $_FILES['image']['size'];
+                $tmp_name = $_FILES['image']['tmp_name'];
+                $error = $_FILES['image']['error'];
+                move_uploaded_file($tmp_name, $target);
+                $img = array('image' => $img_name);
+            }
             foreach ($_POST as $key => $value) {
                 $data[$key] = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS);
             }
         }
+        $data = array_merge($data, $img);
         return $data;
     }
 }

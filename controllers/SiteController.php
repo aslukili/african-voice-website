@@ -41,11 +41,13 @@ class SiteController extends Controller
         $loginForm = new LoginForm();
         if ($request->getMethod() === 'post') {
             $loginForm->loadData($request->getBody());
+
             if ($loginForm->validate() && $loginForm->login()) {
                 Application::$app->response->redirect('/');
                 return;
             }
         }
+
         $this->setLayout('auth');
         return $this->render('login', [
             'model' => $loginForm

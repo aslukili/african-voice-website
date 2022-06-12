@@ -30,17 +30,17 @@ class LoginForm extends Model
         ];
     }
 
-    public function labels()
-    {
-        return [
-            'email' => 'Your Email address',
-            'password' => 'Password'
-        ];
-    }
+//    public function labels()
+//    {
+//        return [
+//            'email' => 'Your Email address',
+//            'password' => 'Password'
+//        ];
+//    }
 
     public function login()
     {
-        $user = User::findOne(['email' => $this->email]);
+        $user = Member::getOne(['email' => $this->email]);
         if (!$user) {
             $this->addError('email', 'User does not exist with this email address');
             return false;

@@ -37,7 +37,7 @@
             <div class="text-red-500"><?php  echo $register->errors['password_confirm'][0];?></div>
         </div>
         <div class="mt-8">
-            <input type="hidden" name="join_date" value="1999-02-02">
+            <input type="hidden" name="join_date" value="<?php echo date('Y-m-d H:i:s') ?>">
             <button type="submit" class="uppercase text-sm font-bold tracking-wide bg-primary text-white p-3 rounded-sm w-full focus:shadow-outline">
                 Register
             </button>

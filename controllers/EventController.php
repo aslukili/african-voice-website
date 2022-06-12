@@ -57,6 +57,7 @@ class EventController extends Controller
     //add new event
     public function add(Request $request)
     {
+
         $addModel = new Event();
         if ($request->getMethod() === 'post') {
             $addModel->loadData($request->getBody());
