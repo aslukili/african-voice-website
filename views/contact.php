@@ -5,7 +5,7 @@
                 Hate forms? Send us an <a href="mailto:abdeslam.loukili.contact@gmail.com" class="underline">email</a> instead.
             </p>
         </div>
-    <div class="">
+    <form class="">
         <div>
             <label class="uppercase text-sm text-gray-600 font-bold">Full Name</label>
             <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-sm focus:shadow-outline"
@@ -24,5 +24,5 @@
                 Send Message
             </button>
         </div>
-    </div>
+    </form>
 </div>

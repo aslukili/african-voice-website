@@ -25,8 +25,6 @@ $config = [
 $app = new Application(dirname(__DIR__), $config);
 
 $app->router->get('/', [SiteController::class, 'home']);
-$app->router->get('/register', [SiteController::class, 'register']);
-$app->router->post('/register', [SiteController::class, 'register']);
 $app->router->get('/login', [SiteController::class, 'login']);
 $app->router->post('/login', [SiteController::class, 'login']);
 $app->router->get('/logout', [SiteController::class, 'logout']);
@@ -45,7 +43,15 @@ $app->router->get('/update-event', [\app\controllers\EventController::class, 'up
 $app->router->post('/update-event', [\app\controllers\EventController::class, 'update']);
 
 
-$app->router->get('/national-rep', [SiteController::class, 'nationalRep']);
+// members resources
+ $app->router->get('/register', [SiteController::class, 'register']);
+ $app->router->get('/members', [\app\controllers\MemberController::class, 'memberList']);
+ $app->router->post('/register', [\app\controllers\MemberController::class, 'add']);
+ $app->router->post('/delete-member', [\app\controllers\MemberController::class, 'delete']);
+
+
+
+ $app->router->get('/national-rep', [SiteController::class, 'nationalRep']);
 
 
 

@@ -15,7 +15,7 @@
     <script defer src="js/dashboard.js"></script>
 </head>
 
-<body class="bg-gray-800 font-sans leading-normal tracking-normal mt-12">
+<body class="bg-gray-100 font-sans leading-normal tracking-normal mt-12">
 <header>
     <!--Nav-->
     <nav aria-label="menu nav" class="bg-red-500 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">

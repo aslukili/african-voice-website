@@ -97,11 +97,6 @@ class SiteController extends Controller
         return $this->render('members', []);
     }
 
-//    public function events()
-//    {
-//        $this->setLayout('dashboard');
-//        return $this->render('events', []);
-//    }
 
     public function nationalRep()
     {
