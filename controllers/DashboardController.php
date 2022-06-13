@@ -13,8 +13,10 @@ use app\core\Controller;
 use app\core\middlewares\AuthMiddleware;
 use app\core\Request;
 use app\core\Response;
-use app\models\User;
+use app\models\Member;
 use app\models\Event;
+use app\models\NatRep;
+
 
 /**
  * Class DashboardController
@@ -25,23 +27,18 @@ use app\models\Event;
 class DashboardController extends Controller
 {
 
-
-
     public function dashboard()
     {
+        $member = new Member();
+        $event = new Event();
+        $resp = new NatRep();
+
         $this->setLayout('dashboard');
-        return $this->render('dashboard', []);
+        return $this->render('dashboard', [
+            'members' => $member,
+            'events' => $event,
+            'resp' => $resp,
+        ]);
     }
 
-    public function members()
-    {
-        $this->setLayout('dashboard');
-        return $this->render('members', []);
-    }
-
-    public function nationalRep()
-    {
-        $this->setLayout('dashboard');
-        return $this->render('national-rep', []);
-    }
 }

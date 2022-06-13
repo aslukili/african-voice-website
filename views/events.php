@@ -39,6 +39,8 @@
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3">
+                            </th>
+                            <th scope="col" class="px-6 py-3">
                                 Title
                             </th>
                             <th scope="col" class="px-6 py-3">
@@ -61,6 +63,9 @@
                         <tbody>
                         <?php foreach ($events as $event):?>
                             <tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+                                <td class="px-6 py-4">
+                                    <img class="w-10 h-10" src="images/<?php echo $event['image']?>">
+                                </td>
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
                                     <?php echo $event['title']?>
                                 </th>

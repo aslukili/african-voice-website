@@ -99,4 +99,13 @@ abstract class DbModel extends Model
         $statement->execute();
         return true;
     }
+
+    public function getCount(): int
+    {
+        $tableName = $this->tableName();
+        $statement = self::prepare("SELECT * FROM $tableName");
+        $statement->execute();
+        $this->dataList =  $statement->fetchAll();
+        return true;
+    }
 }

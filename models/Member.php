@@ -89,6 +89,6 @@ class Member extends UserModel
 
     public function getDisplayName(): string
     {
-        return $this->full_name . ' ' . $this->full_name;
+        return $this->username;
     }
 }

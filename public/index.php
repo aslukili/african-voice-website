@@ -14,7 +14,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $dotenv = \Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 $config = [
-    'userClass' => \app\models\User::class,
+    'userClass' => \app\models\Member::class,
     'db' => [
         'dsn' => $_ENV['DB_DSN'],
         'user' => $_ENV['DB_USER'],
@@ -31,8 +31,11 @@ $app->router->get('/logout', [SiteController::class, 'logout']);
 $app->router->get('/contact', [SiteController::class, 'contact']);
 $app->router->get('/about', [AboutController::class, 'index']);
 $app->router->get('/profile', [SiteController::class, 'profile']);
-$app->router->get('/dashboard', [SiteController::class, 'dashboard']);
 $app->router->get('/members', [SiteController::class, 'members']);
+
+
+//dashboard
+ $app->router->get('/dashboard', [\app\controllers\DashboardController::class, 'dashboard']);
 
 
 //events resources
@@ -50,8 +53,14 @@ $app->router->post('/update-event', [\app\controllers\EventController::class, 'u
  $app->router->post('/delete-member', [\app\controllers\MemberController::class, 'delete']);
 
 
+ //national representatives
+ $app->router->get('/national-rep', [\app\controllers\NatRepsController::class, 'responsiblesList']);
+ $app->router->get('/add-resp', [\app\controllers\NatRepsController::class, 'add']);
+ $app->router->post('/add-resp', [\app\controllers\NatRepsController::class, 'add']);
+ $app->router->post('/delete-resp', [\app\controllers\NatRepsController::class, 'delete']);
+ $app->router->get('/update-resp', [\app\controllers\NatRepsController::class, 'update']);
+ $app->router->post('/update-resp', [\app\controllers\NatRepsController::class, 'update']);
 
- $app->router->get('/national-rep', [SiteController::class, 'nationalRep']);
 
 
 

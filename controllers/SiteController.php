@@ -14,6 +14,7 @@ use app\core\middlewares\AuthMiddleware;
 use app\core\Request;
 use app\core\Response;
 use app\models\LoginForm;
+use app\models\Member;
 use app\models\User;
 
 /**
@@ -56,7 +57,7 @@ class SiteController extends Controller
 
     public function register(Request $request)
     {
-        $registerModel = new User();
+        $registerModel = new Member();
         if ($request->getMethod() === 'post') {
             $registerModel->loadData($request->getBody());
             if ($registerModel->validate() && $registerModel->save()) {
@@ -99,10 +100,4 @@ class SiteController extends Controller
         return $this->render('members', []);
     }
 
-
-    public function nationalRep()
-    {
-        $this->setLayout('dashboard');
-        return $this->render('national-rep', []);
-    }
 }
