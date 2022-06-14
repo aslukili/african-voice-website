@@ -7,7 +7,6 @@ use app\core\Controller;
 use app\core\middlewares\AuthMiddleware;
 use app\core\Request;
 use app\core\Response;
-use app\models\User;
 use app\models\Member;
 
 class MemberController extends Controller

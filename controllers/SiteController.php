@@ -16,7 +16,6 @@ use app\core\Response;
 use app\models\Event;
 use app\models\LoginForm;
 use app\models\Member;
-use app\models\User;
 
 /**
  * Class SiteController
@@ -52,7 +51,6 @@ class SiteController extends Controller
                 return;
             }
         }
-
         $this->setLayout('auth');
         return $this->render('login', [
             'model' => $loginForm
@@ -87,21 +85,25 @@ class SiteController extends Controller
         return $this->render('contact');
     }
 
+    public function community()
+    {
+        return $this->render('community');
+    }
+
+    public function events()
+    {
+        $event = new Event();
+        $event->getAll();
+        $events = $event->dataList;
+        return $this->render('events', [
+            'events' => $events,
+        ]);
+    }
+
     public function profile()
     {
         return $this->render('profile');
     }
 
-    public function dashboard()
-    {
-        $this->setLayout('dashboard');
-        return $this->render('dashboard', []);
-    }
-
-    public function members()
-    {
-        $this->setLayout('dashboard');
-        return $this->render('members', []);
-    }
 
 }

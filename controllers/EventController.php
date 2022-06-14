@@ -19,7 +19,7 @@ class EventController extends Controller
         if ($event->getAll()){
             $events = $event->dataList;
             $this->setLayout('dashboard');
-            return $this->render('events', [
+            return $this->render('manage-events', [
                 'events' => $events,
             ]);
         }

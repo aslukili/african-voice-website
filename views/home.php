@@ -86,7 +86,6 @@
     <h2 class="text-4xl font-bold">Upcoming Events</h2>
     <!-- events -->
     <div class="px-5 mt-9 grid sm:grid-cols-2  xl:grid-cols-4 gap-3  justify-center">
-
         <?php
         $counter = 0;
         $max = 4;

@@ -29,9 +29,10 @@ $app->router->get('/login', [SiteController::class, 'login']);
 $app->router->post('/login', [SiteController::class, 'login']);
 $app->router->get('/logout', [SiteController::class, 'logout']);
 $app->router->get('/contact', [SiteController::class, 'contact']);
+ $app->router->get('/events', [SiteController::class, 'events']);
+ $app->router->get('/community', [SiteController::class, 'community']);
 $app->router->get('/about', [AboutController::class, 'index']);
 $app->router->get('/profile', [SiteController::class, 'profile']);
-$app->router->get('/members', [SiteController::class, 'members']);
 
 
 //dashboard
@@ -39,8 +40,8 @@ $app->router->get('/members', [SiteController::class, 'members']);
 
 
 //events resources
-$app->router->get('/events', [\app\controllers\EventController::class, 'eventList']);
-$app->router->post('/events', [\app\controllers\EventController::class, 'add']);
+$app->router->get('/manage-events', [\app\controllers\EventController::class, 'eventList']);
+$app->router->post('/manage-events', [\app\controllers\EventController::class, 'add']);
 $app->router->post('/delete-event', [\app\controllers\EventController::class, 'delete']);
 $app->router->get('/update-event', [\app\controllers\EventController::class, 'update']);
 $app->router->post('/update-event', [\app\controllers\EventController::class, 'update']);
