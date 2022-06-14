@@ -85,59 +85,31 @@
 <div class="py-8 md:mt-7 container mx-auto">
     <h2 class="text-4xl font-bold">Upcoming Events</h2>
     <!-- events -->
-    <div class="px-5 mt-9 grid sm:grid-cols-2 xl:grid-cols-4 gap-3  justify-center">
+    <div class="px-5 mt-9 grid sm:grid-cols-2  xl:grid-cols-4 gap-3  justify-center">
+
+        <?php
+        $counter = 0;
+        $max = 4;
+        foreach ($events as $event):?>
         <div class="flex justify-center">
-            <div class="max-w-sm bg-white rounded-sm  shadow-md dark:bg-gray-800 dark:border-gray-700">
-                <img class="rounded-t-sm h-40 w-full" src="asset/first.png" alt="event" />
+            <div class="max-w-sm bg-white rounded-sm  shadow-md ">
+                <img class="rounded-t-sm h-40 w-full" src="images/<?php echo $event['image']?>" alt="event" />
                 <div class="p-3">
-                    <span class="text-gray-700">Mar 13, 2022 | </span><span class="font-semibold text-pink-700">Training</span>
+                    <span class="text-gray-700"><?php echo $event['starting_date']?> | </span><span class="font-semibold text-pink-700">Training</span>
                     <a href="#">
-                        <p class="mb-2 mt-1 text-xl font-bold tracking-tight text-primary">Call for debater - Morocco | Free debate training</p>
+                        <p class="mb-2 mt-1 text-xl font-bold tracking-tight text-primary"><?php echo $event['title']?></p>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Welcome to the African Voice 2021 debate series across Africa. This time we are in Morocco. We are holding a 5-day training on debate and public speaking.</p>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?php echo $event['sub_title']?></p>
                     <button class="mt-3 text-center text-primary text-xl px-7 py-1 border-primary border-2 hover:bg-primary hover:text-white">Join now</button>
                 </div>
             </div>
         </div>
-        <div class="flex justify-center">
-            <div class="max-w-sm bg-white rounded-sm  shadow-md dark:bg-gray-800 dark:border-gray-700">
-                <img class="rounded-t-sm h-40 w-full" src="asset/second.png" alt="event" />
-                <div class="p-3">
-                    <span class="text-gray-700">Mar 13, 2022 | </span><span class="font-semibold text-pink-700">Training</span>
-                    <a href="#">
-                        <p class="mb-2 mt-1 text-xl font-bold tracking-tight text-primary">Call for debater - Morocco | Free debate training</p>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Welcome to the African Voice 2021 debate series across Africa. This time we are in Morocco. We are holding a 5-day training on debate and public speaking.</p>
-                    <button class="mt-3 text-center text-primary text-xl px-7 py-1 border-primary border-2 hover:bg-primary hover:text-white">Join now</button>
-                </div>
-            </div>
-        </div>
-        <div class="flex justify-center">
-            <div class="max-w-sm bg-white rounded-sm  shadow-md dark:bg-gray-800 dark:border-gray-700">
-                <img class="rounded-t-sm h-40 w-full" src="asset/third.png" alt="event" />
-                <div class="p-3">
-                    <span class="text-gray-700">Mar 13, 2022 | </span><span class="font-semibold text-pink-700">Training</span>
-                    <a href="#">
-                        <p class="mb-2 mt-1 text-xl font-bold tracking-tight text-primary">Call for debater - Morocco | Free debate training</p>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Welcome to the African Voice 2021 debate series across Africa. This time we are in Morocco. We are holding a 5-day training on debate and public speaking.</p>
-                    <button class="mt-3 text-center text-primary text-xl px-7 py-1 border-primary border-2 hover:bg-primary hover:text-white">Join now</button>
-                </div>
-            </div>
-        </div>
-        <div class="flex justify-center">
-            <div class="max-w-sm bg-white rounded-sm  shadow-md dark:bg-gray-800 dark:border-gray-700">
-                <img class="rounded-t-sm h-40 w-full" src="asset/first.png" alt="event" />
-                <div class="p-3">
-                    <span class="text-gray-700">Mar 13, 2022 | </span><span class="font-semibold text-pink-700">Training</span>
-                    <a href="#">
-                        <p class="mb-2 mt-1 text-xl font-bold tracking-tight text-primary">Call for debater - Morocco | Free debate training</p>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Welcome to the African Voice 2021 debate series across Africa. This time we are in Morocco. We are holding a 5-day training on debate and public speaking.</p>
-                    <button class="mt-3 text-center text-primary text-xl px-7 py-1 border-primary border-2 hover:bg-primary hover:text-white">Join now</button>
-                </div>
-            </div>
-        </div>
+        <?php
+            $counter++;
+            if ($counter === $max) {
+                break;
+            }
+        endforeach;?>
     </div>
 </div>
 

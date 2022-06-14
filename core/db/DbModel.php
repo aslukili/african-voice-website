@@ -20,6 +20,7 @@ use app\core\Model;
 abstract class DbModel extends Model
 {
     public $dataList = [];
+    public $count;
     abstract public static function tableName(): string;
 
     static public function primaryKey(): string
@@ -100,12 +101,12 @@ abstract class DbModel extends Model
         return true;
     }
 
-    public function getCount(): int
+    public function getCount()
     {
         $tableName = $this->tableName();
-        $statement = self::prepare("SELECT * FROM $tableName");
+        $statement = self::prepare("SELECT count(*) FROM $tableName");
         $statement->execute();
-        $this->dataList =  $statement->fetchAll();
+        $this->count =  $statement->fetchColumn();
         return true;
     }
 }

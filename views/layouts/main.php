@@ -69,8 +69,8 @@
 <footer class="bg-gray-900 text-gray-50">
     <div class="container mx-auto pt-8">
         <!--        newsletter and links-->
-        <div class="md:grid md:grid-cols-2 md:justify-between">
-            <div class=" text-center">
+        <div class="md:grid md:grid-cols-2  md:justify-between">
+            <div class=" text-center order-2">
                 <!--        newsletter-->
                 <p class="font-bold text-3xl">Subscribe to our newsletter</p>
                 <p class="mt-7 ">Get monthly Updates, news and best blogs that deserve your time derictly to your inbox</p>
@@ -80,7 +80,7 @@
                     <input type="submit" value="Subscribe" class="bg-gray-100 font-medium text-gray-900">
                 </form>
             </div>
-            <div class="sm:flex mt-9 justify-evenly md:px-16">
+            <div class="sm:flex mt-9 justify-around md:px-3 order-1">
                 <!--        links-->
                 <div>
                     <p class="font-bold">Website</p>
@@ -119,9 +119,9 @@
                 </div>
             </div>
         </div>
-        <div class="mt-10 md:flex justify-between text-center">
+        <div class="mt-10 md:flex justify-center items-center text-center">
             <!--            copyright and social icons-->
-            <span>Copyright 2022</span>
+            <span>Copyright 2022 African Voice</span>
             <div class="flex justify-center">
                 <a href="https://twitter.com/aslukili" target="_blank" class="p-1 flex items-center justify-center rounded-full border-2 border-red-300 w-9 h-9 m-1">
                     <i class=" fa-brands fa-instagram text-red-300"></i>

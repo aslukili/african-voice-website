@@ -30,14 +30,17 @@ class DashboardController extends Controller
     public function dashboard()
     {
         $member = new Member();
+        $member->getCount();
         $event = new Event();
+        $event->getCount();
         $resp = new NatRep();
+        $resp->getCount();
 
         $this->setLayout('dashboard');
         return $this->render('dashboard', [
-            'members' => $member,
-            'events' => $event,
-            'resp' => $resp,
+            'members' => $member->count,
+            'events' => $event->count,
+            'resp' => $resp->count,
         ]);
     }
 

@@ -1,4 +1,4 @@
- <section class="flex-grow">
+<section class="flex-grow">
             <div id="main" class="flex flex-col main-content bg-gray-100 pb-24 md:pb-5">
                 <div class="flex bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
                     <h1 class="font-bold pl-2">Analytics</h1>
@@ -13,7 +13,7 @@
                                 </div>
                                 <div class="flex-1 text-right md:text-center">
                                     <h2 class="font-bold uppercase text-gray-600">Total Members</h2>
-                                    <p class="font-bold text-3xl">75</p>
+                                    <p class="font-bold text-3xl"><?php echo $members?></p>
                                 </div>
                             </div>
                         </div>
@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="flex-1 text-right md:text-center">
                                     <h2 class="font-bold uppercase text-gray-600">Events</h2>
-                                    <p class="font-bold text-3xl">13</p>
+                                    <p class="font-bold text-3xl"><?php echo $events?></p>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="flex-1 text-right md:text-center">
                                     <h2 class="font-bold uppercase text-gray-600">National Rep.</h2>
-                                    <p class="font-bold text-3xl">7</p>
+                                    <p class="font-bold text-3xl"><?php echo $resp?></p>
                                 </div>
                             </div>
                         </div>

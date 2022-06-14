@@ -13,6 +13,7 @@ use app\core\Controller;
 use app\core\middlewares\AuthMiddleware;
 use app\core\Request;
 use app\core\Response;
+use app\models\Event;
 use app\models\LoginForm;
 use app\models\Member;
 use app\models\User;
@@ -32,8 +33,11 @@ class SiteController extends Controller
 
     public function home()
     {
+        $event = new Event();
+        $event->getAll();
+        $events = $event->dataList;
         return $this->render('home', [
-            'name' => 'Name'
+            'events' => $events,
         ]);
     }
 

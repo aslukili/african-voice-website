@@ -72,6 +72,11 @@ class Member extends UserModel
         return parent::getOne($where);
     }
 
+    public function getCount()
+    {
+        return parent::getCount();
+    }
+
     public function getAll()
     {
         return parent::getAll();
