@@ -15,7 +15,7 @@ use app\core\Request;
 use app\core\Response;
 use app\models\Event;
 use app\models\LoginForm;
-use app\models\Member;
+use app\models\User;
 
 /**
  * Class SiteController
@@ -47,8 +47,15 @@ class SiteController extends Controller
             $loginForm->loadData($request->getBody());
 
             if ($loginForm->validate() && $loginForm->login()) {
-                Application::$app->response->redirect('/');
-                return;
+                //TODO check user role
+                if (Application::$app->session->get('role') === 'user'){
+                    Application::$app->response->redirect('/profile');
+                    return;
+                }
+                if (Application::$app->session->get('role') === 'admin'){
+                    Application::$app->response->redirect('/dashboard');
+                    return;
+                }
             }
         }
         $this->setLayout('auth');
@@ -59,7 +66,7 @@ class SiteController extends Controller
 
     public function register(Request $request)
     {
-        $registerModel = new Member();
+        $registerModel = new User();
         if ($request->getMethod() === 'post') {
             $registerModel->loadData($request->getBody());
             if ($registerModel->validate() && $registerModel->save()) {
@@ -98,6 +105,11 @@ class SiteController extends Controller
         return $this->render('events', [
             'events' => $events,
         ]);
+    }
+
+    public function event()
+    {
+        return $this->render('event');
     }
 
     public function profile()

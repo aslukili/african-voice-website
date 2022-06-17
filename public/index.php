@@ -14,7 +14,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $dotenv = \Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 $config = [
-    'userClass' => \app\models\Member::class,
+    'userClass' => \app\models\User::class,
     'db' => [
         'dsn' => $_ENV['DB_DSN'],
         'user' => $_ENV['DB_USER'],
@@ -30,6 +30,7 @@ $app->router->post('/login', [SiteController::class, 'login']);
 $app->router->get('/logout', [SiteController::class, 'logout']);
 $app->router->get('/contact', [SiteController::class, 'contact']);
  $app->router->get('/events', [SiteController::class, 'events']);
+ $app->router->get('/event', [SiteController::class, 'event']);
  $app->router->get('/community', [SiteController::class, 'community']);
 $app->router->get('/about', [AboutController::class, 'index']);
 $app->router->get('/profile', [SiteController::class, 'profile']);
@@ -47,11 +48,11 @@ $app->router->get('/update-event', [\app\controllers\EventController::class, 'up
 $app->router->post('/update-event', [\app\controllers\EventController::class, 'update']);
 
 
-// members resources
+// Users resources
  $app->router->get('/register', [SiteController::class, 'register']);
- $app->router->get('/members', [\app\controllers\MemberController::class, 'memberList']);
- $app->router->post('/register', [\app\controllers\MemberController::class, 'add']);
- $app->router->post('/delete-member', [\app\controllers\MemberController::class, 'delete']);
+ $app->router->get('/Users', [\app\controllers\UserController::class, 'UserList']);
+ $app->router->post('/register', [\app\controllers\UserController::class, 'add']);
+ $app->router->post('/delete-User', [\app\controllers\UserController::class, 'delete']);
 
 
  //national representatives

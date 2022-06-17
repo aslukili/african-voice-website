@@ -1,7 +1,7 @@
 <div class="container mx-auto">
     <div class="md:h-screen ">
         <div class="text-center flex flex-col items-center">
-            <h1 class="font-bold text-3xl pt-7">Our Community core members</h1>
+            <h1 class="font-bold text-3xl pt-7">Our Community core Users</h1>
             <p class="mt-3 max-w-3xl block">As part of African Voice’s expansive network, we actively engage, train, and collaborate with global citizens committed to fostering compassionate, multi-partial dialogue. Their collective dedication in the roles of senior facilitators, trainers, and fellows is crucial to the success of our programs.</p>
         </div>
         <div class="grid md:grid-cols-3 md:justify-between md:gap-3 mt-9">
@@ -14,7 +14,7 @@
                     </div>
                     <div class="relative">
                         <div class=" flex flex-wrap content-center">
-                            <img src="/asset/someone.png" class="mx-auto" alt="">
+                            <img src="/asset/someone.png" class="mx-auto object-center object-cover" alt="">
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="relative">
                         <div class=" flex flex-wrap content-center">
-                            <img src="/asset/sometwo.png" class="mx-auto" alt="">
+                            <img src="/asset/sometwo.png" class="mx-auto object-center object-cover" alt="">
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="relative">
                         <div class=" flex flex-wrap content-center">
-                            <img src="/asset/somethree.png" class="mx-auto" alt="">
+                            <img src="/asset/somethree.png" class="mx-auto object-center object-cover" alt="">
                         </div>
                     </div>
                 </div>

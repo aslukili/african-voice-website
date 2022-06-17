@@ -12,8 +12,8 @@
                                     <div class="rounded-full p-5 bg-green-600"><i class="fa-solid fa-users fa-2x fa-inverse"></i></div>
                                 </div>
                                 <div class="flex-1 text-right md:text-center">
-                                    <h2 class="font-bold uppercase text-gray-600">Total Members</h2>
-                                    <p class="font-bold text-3xl"><?php echo $members?></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Total Users</h2>
+                                    <p class="font-bold text-3xl"><?php echo $Users?></p>
                                 </div>
                             </div>
                         </div>

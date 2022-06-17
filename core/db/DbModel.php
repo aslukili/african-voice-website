@@ -28,6 +28,11 @@ abstract class DbModel extends Model
         return 'id';
     }
 
+    static public function role(): string
+    {
+        return 'role';
+    }
+
     public function save()
     {
         $tableName = $this->tableName();
@@ -50,7 +55,7 @@ abstract class DbModel extends Model
     public function getAll()
     {
         $tableName = $this->tableName();
-        $statement = self::prepare("SELECT * FROM $tableName");
+        $statement = self::prepare("SELECT * FROM $tableName ORDER BY id DESC");
         $statement->execute();
         $this->dataList =  $statement->fetchAll();
         return true;
@@ -65,6 +70,7 @@ abstract class DbModel extends Model
         return true;
     }
 
+    // for selecting with email when logging in
     public static function getOne($where)
     {
         $tableName = static::tableName();

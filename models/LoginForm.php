@@ -40,7 +40,7 @@ class LoginForm extends Model
 
     public function login()
     {
-        $user = Member::getOne(['email' => $this->email]);
+        $user = User::getOne(['email' => $this->email]);
         if (!$user) {
             $this->addError('email', 'User does not exist with this email address');
             return false;
@@ -50,6 +50,11 @@ class LoginForm extends Model
             return false;
         }
 
+
         return Application::$app->login($user);
     }
+
+
+
+
 }

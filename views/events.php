@@ -1,17 +1,28 @@
 <div class="container mx-auto">
-    <div class="h-screen">
-        <h1 class="mt-9 text-4xl font-bold">Find the next event you want to join</h1>
-        <div class="grid grid-cols-5 mb-7 mt-5 h-4/6">
-            <img class="col-span-2 min-h-full" src="asset/speaker.png">
-            <div class="col-span-3 bg-red-800 p-5 text-white">
-                <h2 class=" text-3xl font-medium ">Africa debate championship</h2>
-                <p class="mt-3">Event of the year</p>
-                <p class="mt-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit hendrerit neque, et semper metus consequat nec. Curabitur in tempor urna. Nam ut gravida leo.</p>
-                <p class="mt-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit hendrerit neque, et semper metus consequat nec. Curabitur in tempor urna. Nam ut gravida leo.</p>
+    <div class="md:h-screen">
+        <div class="py-3.5"></div>
+        <div class="bg-red-500 ">
+            <div class="lg:grid lg:grid-cols-2">
+                <div class="py-24 px-10 lg:px-0 max-w-3xl lg:max-w-md mx-auto">
+                    <h2 class="text-3xl tracking-tight font-extrabold text-gray-100">
+                        <span class="block">Ready to participate?</span>
+                        <span class="block">apply to join an upcoming event from your choice.</span>
+                    </h2>
+                    <p class="text-gray-300 mt-5">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                    <div class="inline-block shadow mt-5">
+                        <a href="#" class="inline-block py-3 px-4 bg-white hover:bg-indigo-100 text-primary font-medium border border-transparent rounded-md">Explore all events</a>
+                    </div>
+                </div>
+                <div class="lg:relative lg:mt-16">
+                    <img class="lg:absolute lg:inset-0 h-60 w-full lg:h-full object-cover object-center lg:rounded-tl-md" src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Woman workcation on the beach">
+                </div>
             </div>
         </div>
     </div>
-    <div>
+
+    <div class="mt-9 md:mt-0">
         <h2 class=" text-3xl font-bold">upcoming Events</h2>
         <div class="px-5 mt-9 grid sm:grid-cols-2  xl:grid-cols-3 gap-3  justify-center">
             <?php

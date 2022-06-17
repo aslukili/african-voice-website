@@ -7,7 +7,7 @@ use app\core\Controller;
 use app\core\middlewares\AuthMiddleware;
 use app\core\Request;
 use app\core\Response;
-use app\models\Member;
+use app\models\User;
 use app\models\Event;
 
 class EventController extends Controller
@@ -42,7 +42,7 @@ class EventController extends Controller
             $event->loadData($request->getBody());
             if ($event->update($event->id)){
                 Application::$app->session->setFlash('success', 'Thanks for updating Event');
-                Application::$app->response->redirect('events');
+                Application::$app->response->redirect('manage-events');
             }
             return $this->render('update-event', [
                 'model' => $event
@@ -62,12 +62,12 @@ class EventController extends Controller
             $addModel->loadData($request->getBody());
             if ($addModel->validate() && $addModel->save()) {
                 Application::$app->session->setFlash('success', 'event added!');
-                Application::$app->response->redirect('/events');
+                Application::$app->response->redirect('/manage-events');
                 return 'Show success page';
             }
         }
         $this->setLayout('dashboard');
-        return $this->render('events', []);
+        return $this->render('manage-events', []);
     }
 
 
@@ -79,7 +79,7 @@ class EventController extends Controller
             $event->loadData($request->getBody());
             if ($event->delete($event->id)){
                 Application::$app->session->setFlash('success', 'has successfully deleted');
-                Application::$app->response->redirect('events');
+                Application::$app->response->redirect('manage-events');
             }
         }
     }

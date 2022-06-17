@@ -59,8 +59,12 @@ class Application
     {
         $this->user = $user;
         $primaryKey = $user->primaryKey();
-        $value = $user->{$primaryKey};
-        Application::$app->session->set('user', $value);
+        $role = $user->role();
+        $primaryKeyValue = $user->{$primaryKey};
+        $roleValue = $user->{$role};
+
+        Application::$app->session->set('role', $roleValue);
+        Application::$app->session->set('user', $primaryKeyValue);
 
         return true;
     }

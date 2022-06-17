@@ -7,28 +7,28 @@ use app\core\Controller;
 use app\core\middlewares\AuthMiddleware;
 use app\core\Request;
 use app\core\Response;
-use app\models\Member;
+use app\models\User;
 
-class MemberController extends Controller
+class UserController extends Controller
 {
     //get data to display
-    public function memberList()
+    public function UserList()
     {
-        $member = new Member();
-        if ($member->getAll()){
-            $members = $member->dataList;
+        $User = new User();
+        if ($User->getAll()){
+            $Users = $User->dataList;
             $this->setLayout('dashboard');
-            return $this->render('members', [
-                'members' => $members,
+            return $this->render('Users', [
+                'Users' => $Users,
             ]);
         }
     }
 
 
-    //add new member
+    //add new User
     public function add(Request $request)
     {
-        $registerModel = new Member();
+        $registerModel = new User();
         if ($request->getMethod() === 'post') {
             $registerModel->loadData($request->getBody());
             if ($registerModel->validate() && $registerModel->save()) {
@@ -48,13 +48,13 @@ class MemberController extends Controller
 
     public function delete(Request $request)
     {
-        $event = new Member();
+        $event = new User();
 
         if ($request->isPost()){
             $event->loadData($request->getBody());
             if ($event->delete($event->id)){
                 Application::$app->session->setFlash('success', 'has successfully deleted');
-                Application::$app->response->redirect('members');
+                Application::$app->response->redirect('Users');
             }
         }
     }

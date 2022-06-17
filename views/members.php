@@ -1,7 +1,7 @@
  <section class="flex-grow">
     <div id="main" class="flex flex-col main-content bg-gray-100 pb-24 md:pb-5">
         <div class="flex bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
-            <h1 class="font-bold pl-2">Recently joined members</h1>
+            <h1 class="font-bold pl-2">Recently joined Users</h1>
         </div>
         <div class="flex-grow min-h-full">
             <div>
@@ -27,24 +27,24 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($members as $member):?>
+                            <?php foreach ($Users as $User):?>
                                 <tr class="odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                        <?= $member['full_name']?>
+                                        <?= $User['full_name']?>
                                     </th>
                                     <td class="px-6 py-4">
-                                        <?= $member['email']?>
+                                        <?= $User['email']?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        <?= $member['country']?>
+                                        <?= $User['country']?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        <?= $member['join_date']?>
+                                        <?= $User['join_date']?>
                                     </td>
                                     <td class="px-6 py-4">
                                         <a href="#" class="font-medium text-blue-600 mr-5 hover:underline">View Profile</a>
-                                        <form method="post" action="delete-member" class="inline">
-                                            <input type="hidden" name="id" value="<?= $member['id']?>">
+                                        <form method="post" action="delete-User" class="inline">
+                                            <input type="hidden" name="id" value="<?= $User['id']?>">
                                             <button class="font-medium text-blue-600 mr-5 hover:underline">suspend</button>
                                         </form>
                                     </td>

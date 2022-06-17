@@ -13,7 +13,7 @@ use app\core\Controller;
 use app\core\middlewares\AuthMiddleware;
 use app\core\Request;
 use app\core\Response;
-use app\models\Member;
+use app\models\User;
 use app\models\Event;
 use app\models\NatRep;
 
@@ -29,8 +29,8 @@ class DashboardController extends Controller
 
     public function dashboard()
     {
-        $member = new Member();
-        $member->getCount();
+        $User = new User();
+        $User->getCount();
         $event = new Event();
         $event->getCount();
         $resp = new NatRep();
@@ -38,7 +38,7 @@ class DashboardController extends Controller
 
         $this->setLayout('dashboard');
         return $this->render('dashboard', [
-            'members' => $member->count,
+            'Users' => $User->count,
             'events' => $event->count,
             'resp' => $resp->count,
         ]);
