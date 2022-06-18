@@ -18,7 +18,7 @@ class UserController extends Controller
         if ($User->getAll()){
             $Users = $User->dataList;
             $this->setLayout('dashboard');
-            return $this->render('Users', [
+            return $this->render('members', [
                 'Users' => $Users,
             ]);
         }
@@ -54,7 +54,7 @@ class UserController extends Controller
             $event->loadData($request->getBody());
             if ($event->delete($event->id)){
                 Application::$app->session->setFlash('success', 'has successfully deleted');
-                Application::$app->response->redirect('Users');
+                Application::$app->response->redirect('members');
             }
         }
     }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,14 +17,14 @@
 <body class="bg-gray-100 font-sans leading-normal tracking-normal mt-12">
 <header>
     <!--Nav-->
-    <nav aria-label="menu nav" class="bg-red-500 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
+    <nav aria-label="menu nav" class="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
         <div class="flex justify-end md:mr-3">
             <div class="relative inline-block">
-                <button onclick="toggleDD('myDropdown')" class="drop-button text-white py-2 px-2"> Hi, User <svg class="h-3 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <button onclick="toggleDD('myDropdown')" class="drop-button text-white py-2 px-2"> Hi, <?php use app\core\Application;echo Application::$app->user->getDisplayName(); ?> <svg class="h-3 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg></button>
                 <div id="myDropdown" class="dropdownlist absolute bg-gray-800 text-white right-0 mt-3 p-3 overflow-auto z-30 invisible">
                     <a href="#" class="p-2 flex gap-3 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"><i class="fa fa-user fa-fw"></i> Profile</a>
-                    <a href="#" class="p-2 flex gap-3 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"><i class="fas fa-sign-out-alt fa-fw"></i> LogOut</a>
+                    <a href="/logout" class="p-2 flex gap-3 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"><i class="fas fa-sign-out-alt fa-fw"></i> LogOut</a>
                 </div>
             </div>
         </div>
@@ -43,8 +42,8 @@
                             </a>
                         </li>
                         <li class="mr-3 flex-1">
-                            <a href="Users" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-purple-500">
-                                <i class="fa fa-envelope pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Users</span>
+                            <a href="members" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-purple-500">
+                                <i class="fa fa-envelope pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">members</span>
                             </a>
                         </li>
                         <li class="mr-3 flex-1 ">

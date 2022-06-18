@@ -27,6 +27,11 @@ use app\models\NatRep;
 class DashboardController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->registerMiddleware(new AuthMiddleware(['dashboard']));
+    }
+
     public function dashboard()
     {
         $User = new User();

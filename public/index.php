@@ -50,7 +50,7 @@ $app->router->post('/update-event', [\app\controllers\EventController::class, 'u
 
 // Users resources
  $app->router->get('/register', [SiteController::class, 'register']);
- $app->router->get('/Users', [\app\controllers\UserController::class, 'UserList']);
+ $app->router->get('/members', [\app\controllers\UserController::class, 'UserList']);
  $app->router->post('/register', [\app\controllers\UserController::class, 'add']);
  $app->router->post('/delete-User', [\app\controllers\UserController::class, 'delete']);
 
