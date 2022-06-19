@@ -46,6 +46,10 @@ $app->router->post('/manage-events', [\app\controllers\EventController::class, '
 $app->router->post('/delete-event', [\app\controllers\EventController::class, 'delete']);
 $app->router->get('/update-event', [\app\controllers\EventController::class, 'update']);
 $app->router->post('/update-event', [\app\controllers\EventController::class, 'update']);
+$app->router->get('/add-participant', [\app\controllers\EventController::class, 'addParticipant']);
+$app->router->post('/add-participant', [\app\controllers\EventController::class, 'addParticipant']);
+$app->router->get('/manage-event', [\app\controllers\EventController::class, 'manageEvent']);
+
 
 
 // Users resources

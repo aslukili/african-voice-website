@@ -115,4 +115,5 @@ abstract class DbModel extends Model
         $this->count =  $statement->fetchColumn();
         return true;
     }
+
 }

@@ -7,6 +7,7 @@ use app\core\Controller;
 use app\core\middlewares\AuthMiddleware;
 use app\core\Request;
 use app\core\Response;
+use app\models\Participation;
 use app\models\User;
 use app\models\Event;
 
@@ -23,6 +24,50 @@ class EventController extends Controller
                 'events' => $events,
             ]);
         }
+    }
+
+    public function manageEvent(Request $request)
+    {
+        $event = new Event();
+        $participant = new Participation();
+        $user = new User();
+        if ($request->isGet()){
+            $event->loadData($request->getBody());
+            $event->findOne($event->id);
+            $participant->getRegisteredMembers($event->id);
+            $participant->countRegisteredMembers($event->id);
+            $event = $event->dataList[0];
+            $participants = $participant->dataList;
+
+            foreach ($participants as $part){
+                $user->dataList[] = $user->getOne(['username' => $part['user_fk']]);
+            }
+
+            $this->setLayout('dashboard');
+            return $this->render('manage-event', [
+                'event' => $event,
+                'participants' => $participants,
+                'participantsCount' => $participant->count,
+                'members' => $user->dataList,
+            ]);
+        }
+
+    }
+
+    public function addParticipant(Request $request)
+    {
+        $participation = new Participation();
+        if ($request->getMethod() === 'post') {
+            $participation->loadData($request->getBody());
+
+            if ($participation->validate() && $participation->save()) {
+                Application::$app->session->setFlash('success', 'participant added!');
+                Application::$app->response->redirect('/manage-events');
+                return 'Show success page';
+            }
+        }
+        $this->setLayout('dashboard');
+        return $this->render('add-participant', []);
     }
 
     public function update(Request $request)

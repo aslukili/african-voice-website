@@ -82,6 +82,7 @@
                                     upcoming
                                 </td>
                                 <td class="px-6 py-4 flex">
+                                    <a href="manage-event?id=<?=$event['id']?>" class="bg-blue-500 p-1 mr-1">more details</a>
                                     <a href="update-event?id=<?=$event['id']?>" class="bg-yellow-500 p-1 mr-1">edit</a>
                                     <form method="post" action="delete-event" class="mr-1">
                                         <input type="hidden" name="id" value="<?= $event['id']?>">
