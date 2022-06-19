@@ -57,17 +57,23 @@ class EventController extends Controller
     public function addParticipant(Request $request)
     {
         $participation = new Participation();
+
         if ($request->getMethod() === 'post') {
             $participation->loadData($request->getBody());
 
             if ($participation->validate() && $participation->save()) {
                 Application::$app->session->setFlash('success', 'participant added!');
-                Application::$app->response->redirect('/manage-events');
+                Application::$app->response->redirect('/manage-event?id='.$participation->event_fk);
                 return 'Show success page';
             }
         }
         $this->setLayout('dashboard');
-        return $this->render('add-participant', []);
+        return $this->render('manage-events', []);
+    }
+
+    public function removeMember(Request $request): array
+    {
+        // TODO make this to work with Member username and Event id
     }
 
     public function update(Request $request)
