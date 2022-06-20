@@ -7,6 +7,8 @@ use app\core\Controller;
 use app\core\middlewares\AuthMiddleware;
 use app\core\Request;
 use app\core\Response;
+use app\models\Event;
+use app\models\Participation;
 use app\models\User;
 
 class UserController extends Controller
@@ -42,6 +44,21 @@ class UserController extends Controller
 //        die(var_dump($registerModel));
         return $this->render('register', [
             'register' => $registerModel
+        ]);
+    }
+
+    public function profile()
+    {
+        $user = new User();
+        $event = new Event();
+        $participant = new Participation();
+        $registeredEvent = $event->getOne(['id' => $participant->getOne(['user_fk' => Application::$app->user->getDisplayName()])->event_fk]);
+
+        $userProfile = $user->getOne(['username' => Application::$app->user->getDisplayName()]);
+
+        return $this->render('profile', [
+            'user' => $userProfile,
+            'event' => $registeredEvent
         ]);
     }
 

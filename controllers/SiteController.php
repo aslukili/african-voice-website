@@ -112,10 +112,4 @@ class SiteController extends Controller
         return $this->render('event');
     }
 
-    public function profile()
-    {
-        return $this->render('profile');
-    }
-
-
 }

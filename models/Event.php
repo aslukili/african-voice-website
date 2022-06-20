@@ -71,6 +71,7 @@ class Event extends DbModel
         return parent::findOne($id);
     }
 
+
     public function getAll()
     {
         return parent::getAll();
@@ -78,7 +79,10 @@ class Event extends DbModel
 
     public function delete(int $id)
     {
-        return parent::delete($id);
+        $tableName = $this->tableName();
+        $statement = self::prepare("SET FOREIGN_KEY_CHECKS=0; DELETE FROM $tableName WHERE id = $id; SET FOREIGN_KEY_CHECKS=1;");
+        $statement->execute();
+        return true;
     }
 
     public function update(int $id)

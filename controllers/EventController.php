@@ -74,6 +74,7 @@ class EventController extends Controller
     public function removeMember(Request $request): array
     {
         // TODO make this to work with Member username and Event id
+
     }
 
     public function update(Request $request)

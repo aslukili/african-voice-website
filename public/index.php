@@ -33,7 +33,6 @@ $app->router->get('/contact', [SiteController::class, 'contact']);
  $app->router->get('/event', [SiteController::class, 'event']);
  $app->router->get('/community', [SiteController::class, 'community']);
 $app->router->get('/about', [AboutController::class, 'index']);
-$app->router->get('/profile', [SiteController::class, 'profile']);
 
 
 //dashboard
@@ -52,6 +51,7 @@ $app->router->get('/manage-event', [\app\controllers\EventController::class, 'ma
 
 
 // Users resources
+ $app->router->get('/profile', [\app\controllers\UserController::class, 'profile']);
  $app->router->get('/register', [SiteController::class, 'register']);
  $app->router->get('/members', [\app\controllers\UserController::class, 'UserList']);
  $app->router->post('/register', [\app\controllers\UserController::class, 'add']);

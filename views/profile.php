@@ -16,9 +16,9 @@ $this->title = 'Profile';
             </div>
             <div class="flex justify-between">
                 <div class="mt-5">
-                    <p class="font-bold text-xl">Abdeslam Loukili</p>
-                    <p class="text-lg">@<?php echo Application::$app->user->getDisplayName() ?></p>
-                    <p><span>location </span>joined May 23, 2022</p>
+                    <p class="font-bold text-xl"><?php echo $user->full_name ?></p>
+                    <p class="text-lg">@<?php echo $user->username ?></p>
+                    <p><span class="font-bold">Country: </span><?php echo $user->country ?><br><span class="font-bold">Joined:  </span><?php echo $user->join_date ?> </p>
                 </div>
                 <div >
                     <a href="#" class="rounded rounded-lg px-3 py-1 border border-primary text-primary">
@@ -27,28 +27,33 @@ $this->title = 'Profile';
                 </div>
             </div>
 
+            <?php if ($event): ?>
             <div class="mt-11 p-3.5 bg-yellow-50">
                 events I am part of:
                 <div class="mt-7 grid md:grid-cols-3">
                     <div class="md:col-span-1">
-                        <img src="asset/first.png">
+                        <img class="w-full h-56 object-center object-cover" src="images/<?php echo $event->image?>">
                     </div>
                     <div class="md:col-span-2">
                         <div class="p-3.5 flex flex-col justify-evenly h-full">
                             <p class="font-bold text-2xl ">
-                                event's title starting and ending date
+                                <?php echo $event->title?>
                             </p>
                             <p>
                                 from:
-                                <span class="text-blue-900"> July 12, 2022</span>
+                                <span class="text-blue-900"> <?php echo $event->starting_date?></span>
                                 to:
-                                <span class="text-yellow-800"> July 27, 2022</span>
+                                <span class="text-yellow-800"> <?php echo $event->ending_date?></span>
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
+            <?php else:?>
+            <div class="text-lg">
+                you're not enrolled in any event. check <a href="/events" class="text-blue-500 hover:underline">event page</a> and apply to an event.
+            </div>
+            <?php endif; ?>
         </div>
     </div>
 </div>
