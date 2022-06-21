@@ -25,10 +25,12 @@ $config = [
 $app = new Application(dirname(__DIR__), $config);
 
 $app->router->get('/', [SiteController::class, 'home']);
+ $app->router->post('/', [SiteController::class, 'newsletter']);
 $app->router->get('/login', [SiteController::class, 'login']);
 $app->router->post('/login', [SiteController::class, 'login']);
 $app->router->get('/logout', [SiteController::class, 'logout']);
 $app->router->get('/contact', [SiteController::class, 'contact']);
+$app->router->post('/contact', [SiteController::class, 'contact']);
  $app->router->get('/events', [SiteController::class, 'events']);
  $app->router->get('/event', [SiteController::class, 'event']);
  $app->router->get('/community', [SiteController::class, 'community']);

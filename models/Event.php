@@ -39,16 +39,6 @@ class Event extends DbModel
         return ['title', 'sub_title', 'description', 'responsible', 'seats', 'country', 'starting_date', 'ending_date', 'image'];
     }
 
-//    public function labels(): array
-//    {
-//        return [
-//            'firstname' => 'First name',
-//            'lastname' => 'Last name',
-//            'email' => 'Email',
-//            'password' => 'Password',
-//            'passwordConfirm' => 'Password Confirm'
-//        ];
-//    }
 
     public function rules()
     {

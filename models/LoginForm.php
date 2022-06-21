@@ -50,7 +50,6 @@ class LoginForm extends Model
             return false;
         }
 
-
         return Application::$app->login($user);
     }
 

@@ -8,19 +8,22 @@
     <form method="post" action="">
         <div class="mb-6">
             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Email</label>
-            <input type="email" id="email" name="email" value="<?php echo $register->email;?>" class="bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email@domain.com" required>
-            <div class="text-red-500"><?php  echo $register->errors['email'][0];?></div>
+            <input type="email" id="email" name="email" value="<?php  echo $model->email;?>" class="bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email@domain.com" required>
+            <div class="text-red-500"><?php  echo $model->errors['email'][0];?></div>
         </div>
         <div class="mb-6">
             <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>
             <input type="password" id="password" name="password" class="bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="your password" required>
-            <div class="text-red-500"><?php  echo $register->errors['password'][0];?></div>
+            <div class="text-red-500"><?php  echo $model->errors['password'][0];?></div>
         </div>
         <div class="mt-8">
             <input type="hidden" name="last_login" value="<?php echo date('Y-m-d H:i:s') ?>">
             <button type="submit" class="uppercase text-sm font-bold tracking-wide bg-primary text-white p-3 rounded-sm w-full focus:shadow-outline">
-                Register
+                Log in
             </button>
+        </div>
+        <div class="mt-7">
+            <p>dont have an account? <a href="/register" class="font-bold text-red-900"> Create one</a></p>
         </div>
     </form>
 </div>

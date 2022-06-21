@@ -3,7 +3,7 @@
         <div class="">
             <h1 class=" mb-3.5 text-4xl xl:text-5xl 2xl:text-6xl text-primary font-bold leading-normal">We Speak africa <br /> We Breath Africa</h1>
             <p class="text-xl md:text-2xl xl:text-3xl leading-normal md:leading-10 ">Youth-based initiative promotes Debate and dialogue to Exchange Cultures and Raise Awareness towards Africa and its Culture</p>
-            <button class="mt-8 btn-primary font-medium">Join the community</button>
+            <button class="mt-8 px-3 py-1.5 btn-primary font-bold" onclick="window.location.href='/register'">Join the community</button>
         </div>
         <div class="flex justify-center items-center mt-12">
             <img class="rounded-t-3xl" src="asset/african-youth.png">
@@ -139,7 +139,7 @@
                     <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">”</div>
                 </div>
                 <div class="w-full">
-                    <p class="text-md text-indigo-500 font-bold text-center">Hassan Loukili</p>
+                    <p class="text-md text-indigo-500 font-bold text-center">Hassan Mansour</p>
                     <p class="text-xs text-gray-500 text-center">Founder of African voice</p>
                 </div>
             </div>

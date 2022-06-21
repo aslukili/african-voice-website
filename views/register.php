@@ -8,7 +8,7 @@
     <form method="post" action="">
         <div class="mb-6">
             <label for="full_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Full name</label>
-            <input type="text" name="full_name" id="full_name" value="<?php echo $register->full_name;?>" class="bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="First and Last name" required>
+            <input type="text" name="full_name" id="full_name" value="<?php echo $register->full_name;?>" class="bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="First and Last name" required>
         </div>
         <div class="mb-6">
             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Email</label>
@@ -41,6 +41,9 @@
             <button type="submit" class="uppercase text-sm font-bold tracking-wide bg-primary text-white p-3 rounded-sm w-full focus:shadow-outline">
                 Register
             </button>
+        </div>
+        <div class="mt-7">
+            <p>Already a member?<a href="/login" class="font-bold text-red-900"> Login here</a></p>
         </div>
     </form>
 </div>

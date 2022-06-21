@@ -74,10 +74,10 @@
                 <!--        newsletter-->
                 <p class="font-bold text-3xl">Subscribe to our newsletter</p>
                 <p class="mt-7 ">Get monthly Updates, news and best blogs that deserve your time derictly to your inbox</p>
-                <form class="mt-7">
+                <form class="mt-7" method="post">
                     <label for="email"></label>
-                    <input type="email" name="email" placeholder="Email address">
-                    <input type="submit" value="Subscribe" class="bg-gray-100 font-medium text-gray-900">
+                    <input class="text-lg py-3 px-3.5" type="email" name="email" placeholder="Email address">
+                    <input type="submit" value="Subscribe" class="mt-1.5 md:mt-0 text-lg py-3 px-3.5 bg-gray-100 font-medium text-gray-900">
                 </form>
             </div>
             <div class="sm:flex mt-9 justify-around md:px-3 order-1">
@@ -129,7 +129,7 @@
                 <a href="https://github.com/aslukili" target="_blank" class="p-1 flex items-center justify-center rounded-full border-2 border-red-300 w-9 h-9 m-1">
                     <i class="fa-brands fa-facebook text-red-300"></i>
                 </a>
-                <a href="https://linkedin.com/in/aslukili" target="_blank" class="p-1 flex items-center justify-center rounded-full border-2 border-red-300 w-9 h-9 m-1">
+                <a href="https://www.linkedin.com/company/african-voice/" target="_blank" class="p-1 flex items-center justify-center rounded-full border-2 border-red-300 w-9 h-9 m-1">
                     <i class="fa-brands fa-linkedin text-red-300"></i>
                 </a>
             </div>

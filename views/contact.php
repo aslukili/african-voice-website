@@ -5,19 +5,19 @@
                 Hate forms? Send us an <a href="mailto:abdeslam.loukili.contact@gmail.com" class="underline">email</a> instead.
             </p>
         </div>
-    <form class="">
+    <form class="" method="post">
         <div>
             <label class="uppercase text-sm text-gray-600 font-bold">Full Name</label>
-            <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-sm focus:shadow-outline"
+            <input name="full_name" class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-sm focus:shadow-outline"
                    type="text" placeholder="Full Name">
         </div>
         <div class="mt-8">
             <label class="uppercase text-sm text-gray-600 font-bold">Email</label>
-            <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-sm focus:shadow-outline" type="email" placeholder="user@domain.com">
+            <input name="email" class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-sm focus:shadow-outline" type="email" placeholder="user@domain.com">
         </div>
         <div class="mt-8">
             <label class="uppercase text-sm text-gray-600 font-bold">Message</label>
-            <textarea class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-sm focus:shadow-outline" placeholder="I have a suggestion..."></textarea>
+            <textarea name="message" class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-sm focus:shadow-outline" placeholder="I have a suggestion..."></textarea>
         </div>
         <div class="mt-8">
             <button class="uppercase text-sm font-bold tracking-wide bg-primary text-white p-3 rounded-sm w-full focus:shadow-outline">
