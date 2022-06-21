@@ -50,7 +50,7 @@ $this->title = 'Profile';
                 </div>
             </div>
             <?php else:?>
-            <div class="text-lg">
+            <div class="text-lg mt-7 text-gray-800">
                 you're not enrolled in any event. check <a href="/events" class="text-blue-500 hover:underline">event page</a> and apply to an event.
             </div>
             <?php endif; ?>
