@@ -86,7 +86,7 @@
                                     <a href="update-event?id=<?=$event['id']?>" class="bg-yellow-500 p-1 mr-1">edit</a>
                                     <form method="post" action="delete-event" class="mr-1">
                                         <input type="hidden" name="id" value="<?= $event['id']?>">
-                                        <button class="bg-red-500 p-1">delete</button>
+                                        <button class="bg-red-500 p-1" onclick="confirm('are you sure to delete this event?')">delete</button>
                                     </form>
                                 </td>
                             </tr>
