@@ -30,13 +30,6 @@ class LoginForm extends Model
         ];
     }
 
-//    public function labels()
-//    {
-//        return [
-//            'email' => 'Your Email address',
-//            'password' => 'Password'
-//        ];
-//    }
 
     public function login()
     {
