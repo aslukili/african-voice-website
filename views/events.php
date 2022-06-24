@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="lg:relative lg:mt-16">
-                    <img class="lg:absolute lg:inset-0 h-60 w-full lg:h-full object-cover object-center lg:rounded-tl-md" src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Woman workcation on the beach">
+                    <img class="lg:absolute lg:inset-0 h-60 w-full lg:h-full object-cover object-center lg:rounded-tl-md" src="https://www.business2community.com/wp-content/uploads/2020/03/conference-black-n-white.jpg" alt="Woman workcation on the beach">
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
                         <div>
                             <img class="rounded-t-sm h-40 w-full" src="images/<?php echo $event['image']?>" alt="event" />
                             <div class="p-3">
-                                <span class="text-gray-700"><?php echo $event['starting_date']?> | </span><span class="font-semibold text-pink-700">Training</span>
+                                <span class="text-gray-700"><?php echo $event['starting_date']?> | </span><span class="font-semibold text-pink-700">event's type</span>
                                 <a href="#">
                                     <p class="mb-2 mt-1 text-xl font-bold tracking-tight text-primary"><?php echo $event['title']?></p>
                                 </a>
@@ -42,7 +42,7 @@
                             </div>
                         </div>
                         <div class="text-center relative bottom-1">
-                            <button class="mt-3 text-center text-primary text-xl px-7 py-1 border-primary border-2 hover:bg-primary hover:text-white">Apply to join</button>
+                            <button class="mt-3 text-center text-primary text-xl px-7 py-1 border-primary border-2 hover:bg-primary hover:text-white" onclick="window.location.href='https://forms.gle/aWbKZYzpDDtBkZoc7'">Apply to join</button>
                         </div>
                     </div>
                 </div>
@@ -54,34 +54,35 @@
             endforeach;?>
         </div>
     </div>
-    <div class="mb-9">
-        <h2 class="mt-9 text-3xl font-bold">From archive</h2>
-        <div class="px-5 mt-3 grid sm:grid-cols-2  xl:grid-cols-3 gap-3  justify-center">
-            <?php
-            $counter = 0;
-            $max = 3;
-            foreach ($events as $event):?>
-                <div class="flex justify-center">
-                    <div class="max-w-sm bg-white rounded-sm  shadow-md flex flex-col justify-between pb-1.5">
-                        <img class="rounded-t-sm h-40 w-full" src="images/<?php echo $event['image']?>" alt="event" />
-                        <div class="p-3">
-                            <span class="text-gray-700"><?php echo $event['starting_date']?> | </span><span class="font-semibold text-pink-700">Training</span>
-                            <a href="#">
-                                <p class="mb-2 mt-1 text-xl font-bold tracking-tight text-primary"><?php echo $event['title']?></p>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?php echo $event['sub_title']?></p>
-                            <div class="text-center">
-                                <button class="mt-3 text-center text-primary text-xl px-7 py-1 border-primary border-2 hover:bg-primary hover:text-white">Apply to join</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php
-                $counter++;
-                if ($counter === $max) {
-                    break;
-                }
-            endforeach;?>
-        </div>
-    </div>
+<!--    <div class="mb-9">-->
+<!--        <h2 class="mt-9 text-3xl font-bold">From archive</h2>-->
+<!--        <div class="px-5 mt-3 grid sm:grid-cols-2  xl:grid-cols-3 gap-3  justify-center">-->
+<!--            --><?php
+//            $counter = 0;
+//            $max = 3;
+//            foreach ($events as $event):?>
+<!--                <div class="flex justify-center">-->
+<!--                    <div class="max-w-sm bg-white rounded-sm  shadow-md flex flex-col justify-between pb-1.5">-->
+<!--                        <img class="rounded-t-sm h-40 w-full" src="images/--><?php //echo $event['image']?><!--" alt="event" />-->
+<!--                        <div class="p-3">-->
+<!--                            <span class="text-gray-700">--><?php //echo $event['starting_date']?><!-- | </span><span class="font-semibold text-pink-700">Training</span>-->
+<!--                            <a href="#">-->
+<!--                                <p class="mb-2 mt-1 text-xl font-bold tracking-tight text-primary">--><?php //echo $event['title']?><!--</p>-->
+<!--                            </a>-->
+<!--                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">--><?php //echo $event['sub_title']?><!--</p>-->
+<!--                            <div class="text-center">-->
+<!--                                <button class="mt-3 text-center text-primary text-xl px-7 py-1 border-primary border-2 hover:bg-primary hover:text-white">Apply to join</button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                --><?php
+//                $counter++;
+//                if ($counter === $max) {
+//                    break;
+//                }
+//            endforeach;?>
+<!--        </div>-->
+<!--    </div>-->
+    <div class="py-3.5"></div>
 </div>

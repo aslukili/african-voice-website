@@ -1,12 +1,12 @@
 <div class="md:h-screen container mx-auto">
     <div class=" md:h-5/6 grid md:grid-cols-2 md:items-center px-3.5">
         <div class="">
-            <h1 class=" mb-3.5 text-4xl xl:text-5xl 2xl:text-6xl text-primary font-bold leading-normal">We Speak africa <br /> We Breath Africa</h1>
-            <p class="text-xl md:text-2xl xl:text-3xl leading-normal md:leading-10 ">Youth-based initiative promotes Debate and dialogue to Exchange Cultures and Raise Awareness towards Africa and its Culture</p>
+            <h1 class=" mb-3.5 text-4xl xl:text-5xl 2xl:text-6xl text-primary font-bold leading-normal">Lorem ipsum dolor sit<br /> consetur adipcing elit</h1>
+            <p class="text-xl md:text-2xl xl:text-3xl leading-normal md:leading-10 ">smod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
             <button class="mt-8 px-3 py-1.5 btn-primary font-bold" onclick="window.location.href='/register'">Join the community</button>
         </div>
         <div class="flex justify-center items-center mt-12">
-            <img class="rounded-t-3xl" src="asset/african-youth.png">
+            <img class="rounded-t-3xl" src="https://cdn.pixabay.com/photo/2012/04/24/23/44/dice-41187__340.png">
         </div>
     </div>
     <hr class="mt-7 border-primary"/>
@@ -60,7 +60,7 @@
     <div class="mt-24 grid md:grid-cols-3 gap-3">
         <div class="flex justify-center">
             <div class="max-w-sm">
-                <div class="bg-amber-600 w-10 h-10 mb-7"></div>
+                <div class="flex justify-center items-center w-10 h-10 mb-7"><i class="fa-solid fa-bullseye text-4xl"></i></div>
                 <p class="text-xl font-bold text-primary mb-7">1. Mission</p>
                 <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit hendrerit neque, et semper metus consequat nec. Curabitur in tempor urna. Nam ut gravida leo. Vestibulum velit orci, hendrerit id mattis et, placerat vel velit. </p>
             </div>
@@ -69,12 +69,12 @@
             <div class="max-w-sm">
                 <p class="text-xl font-bold text-primary mb-7">2. Vision</p>
                 <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit hendrerit neque, et semper metus consequat nec. Curabitur in tempor urna. Nam ut gravida leo. Vestibulum velit orci, hendrerit id mattis et, placerat vel velit. </p>
-                <div class="bg-amber-600 w-10 h-10 mt-7"></div>
+                <div class="flex justify-center items-center w-10 h-10 mt-1.5 mb-7"><i class="fa-solid fa-eye text-4xl"></i></div>
             </div>
         </div>
         <div class="flex justify-center">
             <div class="max-w-sm">
-                <div class="bg-amber-600 w-10 h-10 mb-7"></div>
+                <div class="flex justify-center items-center w-10 h-10 mb-7"><i class="fa-solid fa-gem text-4xl"></i></div>
                 <p class="text-xl font-bold text-primary mb-7">3. Value</p>
                 <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit hendrerit neque, et semper metus consequat nec. Curabitur in tempor urna. Nam ut gravida leo. Vestibulum velit orci, hendrerit id mattis et, placerat vel velit. </p>
             </div>
@@ -90,19 +90,23 @@
         $counter = 0;
         $max = 4;
         foreach ($events as $event):?>
-        <div class="flex justify-center">
-            <div class="max-w-sm bg-white rounded-sm  shadow-md ">
-                <img class="rounded-t-sm h-40 w-full" src="images/<?php echo $event['image']?>" alt="event" />
-                <div class="p-3">
-                    <span class="text-gray-700"><?php echo $event['starting_date']?> | </span><span class="font-semibold text-pink-700">Training</span>
-                    <a href="#">
-                        <p class="mb-2 mt-1 text-xl font-bold tracking-tight text-primary"><?php echo $event['title']?></p>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?php echo $event['sub_title']?></p>
-                    <button class="mt-3 text-center text-primary text-xl px-7 py-1 border-primary border-2 hover:bg-primary hover:text-white">Join now</button>
+            <div class="flex justify-center">
+                <div class="max-w-sm bg-white rounded-sm  shadow-md flex flex-col justify-between pb-1.5">
+                    <div>
+                        <img class="rounded-t-sm h-40 w-full" src="images/<?php echo $event['image']?>" alt="event" />
+                        <div class="p-3">
+                            <span class="text-gray-700"><?php echo $event['starting_date']?> | </span><span class="font-semibold text-pink-700">event's type</span>
+                            <a href="#">
+                                <p class="mb-2 mt-1 text-xl font-bold tracking-tight text-primary"><?php echo $event['title']?></p>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?php echo $event['sub_title']?></p>
+                        </div>
+                    </div>
+                    <div class="text-center relative bottom-1">
+                        <button class="mt-3 text-center text-primary text-xl px-7 py-1 border-primary border-2 hover:bg-primary hover:text-white" onclick="window.location.href='https://forms.gle/aWbKZYzpDDtBkZoc7'">Apply to join</button>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php
             $counter++;
             if ($counter === $max) {

@@ -52,6 +52,9 @@ class UserController extends Controller
         $user = new User();
         $event = new Event();
         $participant = new Participation();
+
+
+
         $registeredEvent = $event->getOne(['id' => $participant->getOne(['user_fk' => Application::$app->user->getDisplayName()])->event_fk]);
 
         $userProfile = $user->getOne(['username' => Application::$app->user->getDisplayName()]);

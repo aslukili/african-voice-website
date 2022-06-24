@@ -35,6 +35,9 @@
                     <li>
                         <a class="md:p-4 py-2 block hover:text-primary" href="/contact">Contact</a>
                     </li>
+                    <li>
+                        <a class="md:p-4 py-2 block text-primary" href="/login">Login</a>
+                    </li>
                 </ul>
                 <?php use app\core\Application;
 
@@ -121,7 +124,7 @@
         </div>
         <div class="mt-10 md:flex justify-center items-center text-center">
             <!--            copyright and social icons-->
-            <span>Copyright 2022 African Voice</span>
+            <span>Copyright 2022 aslu-Evently</span>
             <div class="flex justify-center">
                 <a href="https://twitter.com/aslukili" target="_blank" class="p-1 flex items-center justify-center rounded-full border-2 border-red-300 w-9 h-9 m-1">
                     <i class=" fa-brands fa-instagram text-red-300"></i>
@@ -129,7 +132,7 @@
                 <a href="https://github.com/aslukili" target="_blank" class="p-1 flex items-center justify-center rounded-full border-2 border-red-300 w-9 h-9 m-1">
                     <i class="fa-brands fa-facebook text-red-300"></i>
                 </a>
-                <a href="https://www.linkedin.com/company/african-voice/" target="_blank" class="p-1 flex items-center justify-center rounded-full border-2 border-red-300 w-9 h-9 m-1">
+                <a href="https://www.linkedin.com/in/aslukili" target="_blank" class="p-1 flex items-center justify-center rounded-full border-2 border-red-300 w-9 h-9 m-1">
                     <i class="fa-brands fa-linkedin text-red-300"></i>
                 </a>
             </div>

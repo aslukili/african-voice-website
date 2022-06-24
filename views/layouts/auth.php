@@ -36,6 +36,9 @@
                 <li>
                     <a class="md:p-4 py-2 block hover:text-primary" href="/contact">Contact</a>
                 </li>
+                <li>
+                    <a class="md:p-4 py-2 block text-primary" href="/login">Login</a>
+                </li>
             </ul>
             <?php use app\core\Application;
 
