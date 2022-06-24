@@ -1,5 +1,13 @@
-# african-voice-website
-**The official website of african voice organization**
+# Evently
+**events manager for associations and organizations**
 
-The aim of this web app is to help the organization to manage content, events, and Users of the organization.
-This website is built with native PHP with an MVC structure.
+This website is built with native PHP with an MVC architectural pattern.
+
+to run the application:
+
+1- clone the repo:
+git clone
+
+2- npm install
+
+3- run composer update
