@@ -31,3 +31,5 @@ to run the application:
 
 
 the app is barely works :)
+
+to  discover what you can do, just add /dashboard in the url and you'll be redirected to the admin dashboard xd, adjust user roles from your database; by default any new registered user has full privilages.
