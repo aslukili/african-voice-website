@@ -27,7 +27,7 @@ class NatRep extends DbModel
 
     public static function tableName(): string
     {
-        return 'nat_reps';
+        return 'responsibles';
     }
 
     public function attributes(): array
