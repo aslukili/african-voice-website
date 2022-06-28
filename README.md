@@ -1,7 +1,17 @@
 # Evently
 **events manager for associations and organizations**
 
-This web app is built with native PHP with an MVC architectural pattern.
+This web app is built with vanilla PHP with an MVC architectural pattern.
+
+The big part of this project is to build the MVC microframework itself (the core folder). this microframework contains the following features:
+
+- routing
+- middlewares
+- exceptions
+- Database connection with basic queries (auth and CRUD operation)
+- sessions
+- migrations
+
 it is a cms for creating events and managing participants
 
 to run the application:
